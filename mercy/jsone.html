@@ -1,0 +1,18 @@
+<!doctype html>
+<link rel="stylesheet" href="style.css" type="text/css">
+<body>
+<div id="form">
+    <form>
+        <input id="space" placeholder="Input number to get square root">
+    </form>
+</div>
+<div id="answer"></div>
+</body>
+<script>
+    document.getElementById("space").addEventListener("keyup",change);
+function change() {
+    var a = document.getElementById("space").value;
+    document.getElementById("answer").innerHTML = a ** 2;
+}
+</script>
+</html>

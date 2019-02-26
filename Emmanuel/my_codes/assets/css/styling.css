@@ -1,0 +1,35 @@
+#main{
+    font-family:'Courier New', Courier, monospace Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #f00;
+    padding-top:300px;
+
+}
+#header{
+    text-align: right;
+}
+#footer{
+    text-align:right;
+    padding-top: 400px
+}
+
+#h{
+    color: #468fd1;
+}
+#e{
+    color: #db5b44;
+}
+#y{
+    color: #f2bb46;
+}
+#mercy{
+    color: #66a154;
+}
+#searchbox{
+width:450px;
+padding: 20px 10px;
+text-align: left;
+border-radius:20px;
+line-height: 5px;
+
+}

@@ -7,20 +7,31 @@
     <title>Age Verification</title>
 </head>
 <body>
+    <form action="" id="form">
+        <input type="text" id="name" placeholder="please input your name">
+        <input type="text" id="age" placeholder="please input your age">
+        <button type="submit">login</button>
+    </form>
+    <div id="result"></div>
     <script>
-        var name = prompt("Please enter your name");
-        var age = parseInt(prompt("Please enter your age"));
-        if(age>12){
-            alert("you are welcome");
-        }else{
-            if(age == 12){
-                alert("you will be eligible in a few months");
+        document.getElementById('form').addEventListener("submit", function(event){
+            // this will prevent the form from submitting and reloading the pagee
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var result = document.getElementById('result');
+            // the isNaN function will check if the variable in it is a number and returns true or false 
+            if(isNaN(age)){
+                result.innerHTML = "<strong>Your age has to be a number;-)</strong>";
+            }else{
+                if(age>12 && name.length<5){
+                    result.innerHTML = "Welcome "+name+", you are eligible";
+                }else{
+                    // blink is really old I dont think it works anymore
+                    result.innerHTML = "<blink>BOUNCE!!</blink>"
+                }
             }
-            alert("you need "+ 12-age +" years more");
-        }
-        if(name.length > 5){
-            alert("bounce");
-        }
+        });
     </script>
 </body>
 </html>

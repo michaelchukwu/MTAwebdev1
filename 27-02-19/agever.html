@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Age Verification</title>
+</head>
+<body>
+    <script>
+        var name = prompt("Please enter your name");
+        var age = parseInt(prompt("Please enter your age"));
+        if(age>12){
+            alert("you are welcome");
+        }else{
+            if(age == 12){
+                alert("you will be eligible in a few months");
+            }
+            alert("you need "+ 12-age +" years more");
+        }
+        if(name.length > 5){
+            alert("bounce");
+        }
+    </script>
+</body>
+</html>

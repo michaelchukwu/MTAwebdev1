@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DATA ENTRY</title>
+    <header id="header1">DATA ENTRY FORM</header>
+    <style>
+        #header1{text-align: center;font-size:xx-large;}
+        #submit{cursor:pointer;}
+        #username{background-color: rgb(208, 230, 231); width:400px; }
+        #password{background-color: rgb(208, 230, 231); width: 200px;}
+        #sex{background-color:whitesmoke;}
+        /* #BackSpace{background:turquoise;} */
+        
+
+        /* name:hover{display:"";} */
+    </style>
+    
+</head>
+    
+<body>
+    
+    <form>
+        <div id="BackSpace">
+        <div id="space">ENTER YOUR DETAILS HERE</div>
+        
+            <input id="username" type="text"; placeholder="INPUT NAME HERE">
+            <input id="password" placeholder="INPUT PASSWORD HERE">        
+            <!-- <input id="nationality"> -->
+            <select id="sex">
+                    <option value="male">MALE</option>
+                    <option value="female">FEMALE</option>
+                    <option value="female">OTHER</option>
+            </select>
+            <button id="submit">SUBMIT</button>
+        </div>
+
+    </form>
+
+    <script>
+        var username=document.getElementById("username").value;
+        var password=document.getElementById("password").value;  
+        var len_p = password.length;    
+        console.log(password);
+        console.log(len_p);
+        // alert(len_p);
+        var userInt=parseInt(username);
+        var passInt=parseInt(password);
+
+        // if (len_p<=5){
+        //        alert("Password cannot be less than 5 characters");
+        //    } else{alert(len_p);}
+           
+
+        document.getElementById("password").addEventListener("click", submit_b);
+        // event.preventDefault;
+
+        function submit_b(){
+           if (len_p<=5){
+               alert("Password cannot be less than 5 characters");}
+           else if(userInt==passInt){alert("Username and Password cannot be the same")}
+        }  
+        // addEventListener("click", submit_b);
+    </script>
+</body>
+</html>

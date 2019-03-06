@@ -15,7 +15,13 @@ function calculate(event){
     // here you are to complete the switch statement to perform some basic operations
     // ie when the value of the operator is 'minus' then num1 should subtract num2
     switch (op){
+        case "minus": answer.value = num1 - num2;
+        break;
         case "plus": answer.value = num1 + num2;
+        break;
+        case "multiply": answer.value = num1 * num2;
+        break;
+        case "divide": answer.value = num1 / num2;
         break;
         default: answer.value = num1 + num2;
         break;

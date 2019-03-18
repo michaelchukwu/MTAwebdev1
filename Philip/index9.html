@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ONLINE ELECTION OFFICIAL WEBSITE: PROTOTYPE</title>
+        <header id="header1">2023 ELECTIONS: ONLINE</header>
+
+        <style>
+            #APC-P{background-color:burlywood; cursor: pointer; height:50px; width: 32%; float:left; border-radius:25px;}
+            #PDP-P{background-color: chocolate; cursor: pointer; height:50px; width: 32%;border-radius:25px;}
+            #SDP-P{background-color: blueviolet; cursor: pointer; height:50px; width: 32%; float:right;border-radius:25px;}
+            #ANPP-P{background-color: cornflowerblue; cursor: pointer; height:50px; width: 32%; float:left;border-radius:25px;}
+            #FRESH-P{background-color: crimson; cursor: pointer; height:50px; width: 32%;border-radius:25px;}
+            #ANN-P{background-color: darkgoldenrod; cursor: pointer; height:50px; width: 32%; float:right;border-radius:25px;}  
+
+            #APC-G{background-color:burlywood; cursor: pointer; height:50px; width: 32%;float:left;border-radius:25px;}
+            #PDP-G{background-color: chocolate; cursor: pointer; height:50px; width: 32%;border-radius:25px;}
+            #SDP-G{background-color: blueviolet; cursor: pointer; height:50px; width: 32%;float:right;border-radius:25px;}
+            #ANPP-G{background-color: cornflowerblue; cursor: pointer; height:50px; width: 32%;float:left;border-radius:25px;}
+            #FRESH-G{background-color: crimson; cursor: pointer; height:50px; width: 32%;border-radius:25px;}
+            #ANN-G{background-color: darkgoldenrod; cursor: pointer; height:50px; width: 32%;float:right;border-radius:25px;} 
+
+            #vote{color:black;cursor: pointer; background-color: rgb(21, 99, 10); height:50px; width:250px;}
+
+            #header1{text-justify: auto; background-color:rgb(27, 107, 70); font-size: 0.5in;text-align: center;}
+            /* #presidential{display:table-cell;} */
+            /* #gubernatorial{} */
+            /* #senatorial{} */ 
+            #PVCno{background-color: rgb(190, 231, 231);border-width:0.02in; height:0.4in; width:3in;float:left;}
+            #LocalTime{background-color: rgb(190, 231, 231);border-width:0.02in; height:0.4in; float:center;}
+            #back_set{background-color:grey; width:100%; height:100%;}
+
+            /* #pres-p{text-align:center;position: relative;} */
+            /* #gub-g{text-align:center;} */
+            
+
+            /* #APC:hover{cursor: pointer;}  */
+
+        </style>
+    </head>
+
+    <body>
+        <!-- <div id="header1"></div>
+        <div id="back_set"></div>
+        <div id="presidential"></div>
+        <div id="gubernatorial"></div> -->
+               
+
+        <form>
+            <div id="back_set">
+                <input type="text" id="PVCno">
+                <input type="date" id="LocalTime">
+                
+                </br></br>
+                
+                <p-p id="pres-p"><b>PRESIDENTIAL</b></p-p></br></br>
+                <div id="presidential">                                        
+                        <button id="APC-P" class="APC">APC</button>
+                        <button id="PDP-P">PDP</button>
+                        <button id="SDP-P">SDP</button>
+                        <button id="ANPP-P">ANPP</button>
+                        <button id="FRESH-P">FRESH</button>
+                        <button id="ANN-P">ANN</button>
+                </div></br>
+                
+                <p-g id="gub-g"><b>GUBERNATORIAL</b></p-g></br></br>
+                <div id="gubernatorial">                   
+                        <button id="APC-G"class="APC">APC</button>
+                        <button id="PDP-G">PDP</button>
+                        <button id="SDP-G">SDP</button>
+                        <button id="ANPP-G">ANPP</button>
+                        <button id="FRESH-G">FRESH</button>
+                        <button id="ANN-G">ANN</button>
+                </div>
+
+                <div>
+                    <button id="vote"><b>VOTE</b></button>
+                </div>
+
+            <div>
+                      
+        </form>
+
+        <script>
+            alert("CONTINUE TO VOTER VERIFICATION");
+            var PVC_saved= "123HJN28FP";
+            var finger_saved= "23489";
+            var PVC = prompt("ENTER PVC NUMBER");
+            var finger = alert("PLACE YOUR FINGER ON THE READER");
+            // var finger=parseInt(finger);
+            
+            // function verification(){
+            //     if (PVC==PVC_saved){
+            //         if(finger==finger_saved){alert("VERIFICTION COMPLETE, WELCOME +user")}
+            //         }
+            //     else{alert("VERIFICATION UNSUCCESSFUL");}
+            //     }
+            //     return;
+            //     console.log (finger);
+
+            // verification();
+            
+
+     
+        </script>
+
+    </body>
+</html>

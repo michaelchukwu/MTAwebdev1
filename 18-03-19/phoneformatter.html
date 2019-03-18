@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phone</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="" id="tel">
+        <button id="format">format</button>
+        <div id="a"></div>
+    </div>
+    <script>
+    document.getElementById('format').addEventListener('click', function(){
+        var x = document.getElementById('tel').value;
+        if(x.length == 11){
+            var a = x.split("");
+            document.getElementById('a').innerText = "+234 ("+a[0]+")"+a[1]+a[2]+a[3]+" "+a[4]+a[5]+a[6]+a[7]+" "+a[8]+a[9]+a[10];
+        }else{
+            document.getElementById('a').innerText = "there is an error";
+        }
+    });
+    </script>
+</body>
+</html>

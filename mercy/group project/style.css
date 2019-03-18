@@ -1,0 +1,66 @@
+header h1{
+    padding-top: 40px;
+    font-family: Arial, Helvetica, sans-serif
+}
+ 
+header p {
+    font-style: italic;
+    font-size: 11px;
+}
+
+input[type='text'],
+input[type='email'],
+#comments {
+    border: none ;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.7);
+    border-radius: 0;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+#comments:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(151, 228, 36, 0.7);
+}
+#btn, #submit {
+    border: 1px solid #97e424b3;
+    color: rgba(150, 150, 150, 1);
+    border-radius: 5px;
+}
+
+#btn:hover {
+    color: rgba(151, 228, 36, 0.7);
+}
+#submit{
+    background: rgba(151, 228, 36, 0.7);
+}
+#submit:hover{
+    background: transparent;
+    color: rgba(151, 228, 36, 0.7);
+}
+.outer {
+    border: 0;
+    padding: 80px;
+    box-shadow: 0 2px 5px 0 rgba(151, 228, 36, 0.7),
+    0 2px 10px 0 rgba(151, 228, 36, 0.7);
+    -moz-box-shadow: 0 2px 5px 0 rgba(151, 228, 36, 0.7),
+    0 2px 10px 0 rgba(151, 228, 36, 0.7);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(151, 228, 36, 0.7),
+    0 2px 10px 0 rgba(151, 228, 36, 0.7);
+}
+
+.form-group p {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgba(151, 228, 36, 0.7);
+}

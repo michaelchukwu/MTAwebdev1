@@ -16,52 +16,53 @@
            <h1 id="title">MTA SURVEY</h1>
            <p id="description">HOW DID WE DO? TAKE A MOMENT AND FILL THIS SURVEY.</p>
    </header>
-   <div class="outer container">
+   <div class="outer container" id="divInfo">
        <form id="survey-form" role="form">
-            <section id="namesec">
+            <section id="namesect">
 
                 <div class="form-row form-group">
                     <div class="col">
                        <!-- <label for="name" class="label">NAME</label> -->
-                        <input type="text" class="form-control" placeholder="ENTER YOUR NAME" required>  
+                        <input type="text" class="form-control" placeholder="ENTER YOUR NAME" id="userName" required>  
                     </div>
                     <div class="col">
                         <!--<label for="email" class="label">EMAIL</label> -->
-                        <input type="email" class="form-control" placeholder="EMAIL ADDRESS" required>
+                        <input type="email" class="form-control" placeholder="EMAIL ADDRESS" id="emailAdd" required>
                     </div>
                 </div>
 
-                    <div class="form-group text-right" >
-                        <button id="btn" type="button" class="btn btn-outline btn-lg ">Next</button>
+                    <!-- Created a single section for user and course details, hid the first button rather than deleting so as not to alter the styling -->
+                    <div class="form-group text-right" hidden>
+                        <button id="btn1" type="button" class="btn btn-outline btn-lg ">Next</button>
                     </div>
 
                 
-
-            </section>
-
-                <section id="info">
+            <!-- </section>
+                <section id="info"> -->
                     <div class="form-row form-group">
                         <div class="col">
                            <!-- <label for="course" class="label">COURSE TAKEN</label> -->
-                            <input type ="text" class="form-control" placeholder="ENTER THE COURSE YOU TOOK">
+                            <input type ="text" class="form-control" placeholder="ENTER THE COURSE YOU TOOK" id="courseID">
                         </div>
 
                         <div class="col">
                      <!--<label for="info" class="label">TUTOR'S NAME</label> -->
-                    <input type="text" class="form-control" placeholder="ENTER TUTOR'S NAME">
+                    <input type="text" class="form-control" placeholder="ENTER TUTOR'S NAME" id="tutName">
                     </div>
 
                     </div>
                     <div class="form-group text-right">
-                    <button id="btn" type="button" class="btn btn-outline btn-lg">Next</button>
+                    <button id="btn2" type="button" class="btn btn-outline btn-lg">Next</button>
                 </div>
                 </section>
+                </div>
 
-                <section id="pg1" class="sec" hidden>
+                <div id="divSect1" hidden>
+                <section id="pg1" class="sec">
                     <div class="mx-auto" style="width:600px">
                         <div id="q1" class="form-group">
                             
-                                <p>How would you rate the delivery of the lessons?</p>
+                                <p>Q1. How would you rate the delivery of the lessons?</p>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" value="vgood" name="q1">
                                     <label class="form-check-label" for="vgood">Very Good</label>
@@ -73,202 +74,245 @@
                                     <lable class="form-check-label" for="good">Good</lable>
                                 </div>  
                             
-                            <div class="form-btn form-check-inline">
-                                <input class="form-check-input" type="radio" value="fair" name="q1">
-                                <label class="form-check-label" for="fair">Fair</label>
-                            </div>
+                                <div class="form-btn form-check-inline">
+                                    <input class="form-check-input" type="radio" value="fair" name="q1">
+                                    <label class="form-check-label" for="fair">Fair</label>
+                                </div>
                             
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" value="poor" name="q1">
-                                <label class="form-check-label" for="poor">Poor</label>
-
-                            </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="poor" name="q1">
+                                    <label class="form-check-label" for="poor">Poor</label>
+                                </div>
                             
-                            <div class="form-check form-check-inline">
+                                <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" value="vpoor" name="q1">
                                     <label class="form-check-label" for="vpoor">Very Poor</label>
-            
-                                        </div>
+                                </div>
+
                         </div>
                         <div id="q2" class="form-group">
-                                <p>Would you say that you have been provided with enough relevant materials?</p>
+                                <p>Q2. Would you say that you have been provided with enough relevant materials?</p>
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="yes" name="q2">
-                                        <label class="form-check-label" for="yes">yes</label>
+                                    <input class="form-check-input" type="radio" value="yes" name="q2">
+                                    <label class="form-check-label" for="yes">yes</label>
         
-                                    </div>
+                                </div>
 
-                                    <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" value="no" name="q2">
-                                            <label class="form-check-label" for="poor">No</label>
-            
-                                        </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="no" name="q2">
+                                    <label class="form-check-label" for="poor">No</label>
+                                </div>
                         </div>
                         
                         <div id="q3" class="form-group">
-                                <p>What area has most interested you</p>
+                                <p>Q3. What area has most interested you?</p>
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="html" name="q3">
-                                        <label class="form-check-label" for="poor">HTML</label>
-                                    </div>
+                                    <input class="form-check-input" type="radio" value="html" name="q3">
+                                    <label class="form-check-label" for="poor">HTML</label>
+                                </div>
 
-                                    <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" value="css" name="q3">
-                                            <label class="form-check-label" for="poor">CSS</label>
-            
-                                        </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="css" name="q3">
+                                    <label class="form-check-label" for="poor">CSS</label>
+                                </div>
 
                             
-                                        <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" value="js" name="q3">
-                                                <label class="form-check-label" for="poor">Javascript</label>
-                
-                                            </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="js" name="q3">
+                                    <label class="form-check-label" for="poor">Javascript</label>
+                                </div>
                         </div>
                         
                         <div id="q4" class="form-group">
-                                <p>How has the learning environment been so far</p>
+                                <p>Q4. How has the learning environment been so far?</p>
 
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="vgood" name="q4">
-                                        <label class="form-check-label" for="vgood">Very Good</label>
+                                    <input class="form-check-input" type="radio" value="vgood" name="q4">
+                                    <label class="form-check-label" for="vgood">Very Good</label>
         
-                                    </div>
+                                </div>
         
-                                    <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" value="Good" name="q4">
-                                            <label class="form-check-label" for="good">Good</label>
-                                        </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="Good" name="q4">
+                                    <label class="form-check-label" for="good">Good</label>
+                                </div>
                                     
-                                        <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" value="Fair" name="q4">
-                                                <label class="form-check-label" for="fair">Fair</label>
-                                            </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="Fair" name="q4">
+                                    <label class="form-check-label" for="fair">Fair</label>
+                                </div>
                                     
-                                            <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" value="Poor" name="q4">
-                                                    <label class="form-check-label" for="poor">Poor</label>
-                                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="Poor" name="q4">
+                                    <label class="form-check-label" for="poor">Poor</label>
+                                </div>
         
-                                                <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" value="vpoor" name="q4">
-                                                        <label class="form-check-label" for="vpoor">Very Poor</label>
-                                                    </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="vpoor" name="q4">
+                                    <label class="form-check-label" for="vpoor">Very Poor</label>
+                                </div>
 
                         </div>
                         
                         <div id="q5" class="form-group">
-                                <p>How has the relationship with the tutor been?</p>
+                                <p>Q5. How has the relationship with the tutor been?</p>
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="vgood" name="q5">
-                                        <label class="form-check-label" for="vgood">Very Good</label>
-                                    </div>
+                                    <input class="form-check-input" type="radio" value="vgood" name="q5">
+                                    <label class="form-check-label" for="vgood">Very Good</label>
+                                 </div>
         
-                                    <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" value="good" name="q5">
-                                            <label class="form-check-label" for="good">Good</label>
-                                        </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="good" name="q5">
+                                    <label class="form-check-label" for="good">Good</label>
+                                </div>
                                     
-                                        <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" value="fair" name="q5">
-                                                <label class="form-check-label" for="fair">Fair</label>
-                                            </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="fair" name="q5">
+                                    <label class="form-check-label" for="fair">Fair</label>
+                                </div>
                                     
-                                            <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" value="poor" name="q5">
-                                                    <label class="form-check-label" for="poor">Poor</label>
-                                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="poor" name="q5">
+                                    <label class="form-check-label" for="poor">Poor</label>
+                                </div>
         
-                                    
-                                                <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" value="vpoor" name="q5">
-                                                        <label class="form-check-label" for="vpoor">Very Poor</label>
-                                                    </div>
-                                            </div>
-                                            <div class="form-group text-right">
-                                                    <button id="btn" type="button" class="btn btn-outline btn-lg">Next</button>
-                                                </div>
+                                 
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="vpoor" name="q5">
+                                    <label class="form-check-label" for="vpoor">Very Poor</label>
+                                </div>
+                                </div>
+                                <div class="form-group text-right">
+                                <button id="btn3" type="button" class="btn btn-outline btn-lg">Next</button>
+                                </div>
                             </div>
-                    
-
+                
                 </section>
-
-                <section id="pg2"  class="sec" hidden>
+                </div>
+                
+                <div id="divSect2" hidden>
+                <section id="pg2"  class="sec">
                         <div class="mx-auto" style="width:600px">
                     
-                    <div id="q6" class="form-group">
-                            <p>Would you say the learning aids have been adequate?</p>
+                        <div id="q6" class="form-group">
+                            <p>Q6. Would you say the learning aids have been adequate?</p>
                             <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" value="yes" name="q6">
                                     <label class="form-check-label" for="yes">yes</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="no" name="q6">
-                                        <label class="form-check-label" for="no">No</label>
-                                    </div>
-                     </div>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="no" name="q6">
+                                    <label class="form-check-label" for="no">No</label>
+                            </div>
+                        </div>
                      
-                     <div id="q7" class="form-group">
-                            <p>Have you found the take home exercises useful to your learning?</p>
+                        <div id="q7" class="form-group">
+                            <p>Q7. Have you found the take home exercises useful to your learning?</p>
                             <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" value="yes" name="q7">
                                     <label class="form-check-label" for="yes">Yes</label>
-                                </div>
-
-                                <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="no" name="q7">
-                                        <label class="form-check-label" for="no">No</label>
-                                    </div>
+                            </div>       
+                        
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="no" name="q7">
+                                    <label class="form-check-label" for="no">No</label>
+                            </div>
                         </div>
                         
                         <div id="q8" class="form-group">
-                                <p>Has the class so far met your general expectations?</p>
-                                <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="yes" name="q8">
-                                        <label class="form-check-label" for="yes">Yes</label>
-                                    </div>
+                            <p>Q8. Has the class so far met your general expectations?</p>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="yes" name="q8">
+                                    <label class="form-check-label" for="yes">Yes</label>
+                            </div>
 
-                                    <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" value="no" name="q8">
-                                            <label class="form-check-label" for="no">No</label>
-                                        </div>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="no" name="q8">
+                                    <label class="form-check-label" for="no">No</label>
+                            </div>
 
-                                        <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" value="indifferent" name="q8">
-                                                <label class="form-check-label" for="Indifferent">Indifferent</label>
-                                            </div>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="indifferent" name="q8">
+                                    <label class="form-check-label" for="Indifferent">Indifferent</label>
+                            </div>
                         </div>
                         
                         <div id="q9" class="form-group">
-                                <p>Have you followed us on social media?</p>
-                                <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="instagram" name="q9">
-                                        <label class="form-check-label" for="yes"><a href="https://instagram.com/mtacademy.ng" target="_blank">Instagram:mtacademy.ng</a></label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="twitter" name="q9">
-                                            <label class="form-check-label" for="twitter"><a href="https://twitter.com/mta_ng" target="_blank">Twitter:mta_ng</a></label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" value="facebook" name="q9">
-                                                <label class="form-check-label" for="fb"><a href="https://facebook.com/mtacademyng" target="_blank">Fb:mtacademyng</a></label>
-                                            </div>
+                            <p>Q9. Have you followed us on social media?</p>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="instagram" name="q9">
+                                    <label class="form-check-label" for="yes"><a href="https://instagram.com/mtacademy.ng" target="_blank">Instagram:mtacademy.ng</a></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="twitter" name="q9">
+                                    <label class="form-check-label" for="twitter"><a href="https://twitter.com/mta_ng" target="_blank">Twitter:mta_ng</a></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="facebook" name="q9">
+                                    <label class="form-check-label" for="fb"><a href="https://facebook.com/mtacademyng" target="_blank">Fb:mtacademyng</a></label>
+                            </div>
                         </div>
                         
                         <div id="q10" class="form-group">
-                                <p>Please leave a comment on how we can help your journey into tech more pleasurable</p>
+                            <p>Please leave a comment on how we can help your journey into tech more pleasurable</p>
                             <label for="comments">Comments</label> 
                             <textarea name="comments" placeholder="Any comments" class="form-control" id="comments" row="4"></textarea>                           
                         </div>
                         <div class="main-btn text-right">
                             <input type="submit" value="submit" id="submit" class="btn btn-outline btn-lg">
                         </div>
-                    </div>
+                        </div>
 
                 </section>
+                </div>
            
-            </div>
        </form>
+
+       <script>
+            // document.getElementById("btn1").addEventListener("click", function(){
+            //    var username = document.getElementById("userName").value;
+            //    var email = document.getElementById("emailAdd").value;
+            //    var personal = [username, email];                
+            // });
+            
+            // Stores the user personal and course details, working fine
+            document.getElementById("btn2").addEventListener("click", function(){
+                var username = document.getElementById("userName").value;
+                var email = document.getElementById("emailAdd").value;
+                var tutor = document.getElementById("tutName").value;
+                var course = document.getElementById("courseID").value;
+                var personal = [username, email];
+                var nonPersonal = [tutor, course];
+                console.log(username, email, tutor, course, personal);
+            });
+
+            // Transitions between Personal ID section and the first section of questions
+            document.getElementById("btn2").addEventListener("click", function(){
+                document.getElementById("divSect1").removeAttribute("hidden");
+                document.getElementById("divInfo").style.display = "none";
+            });
+
+            // Transitions between the first section of questions and the second, not working though
+            document.getElementById("btn3").addEventListener("click", function(){
+                document.getElementById("divSect1").style.display = "none";
+                document.getElementbyid("divSect2").removeAttribute("hidden");
+            });
+
+            //Supposed to extract the value from a radio input, not working though    
+            let Q1 = document.querySelectorAll("[name=q1");
+                for(let button of Array.from(q1)){
+                    button.addEventListener("change", function(){
+                        document.body.style.background = button.value;
+                    })
+                }
+                
+            //Should extract the values as selected by the user and create an array which would be stored  
+            document.getElementById("submit").addEventListener("click", function(){
+                var userValues = [personal, nonPersonal, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q10];  
+            })
+           
+           
+       </script>
 
    </div>
     

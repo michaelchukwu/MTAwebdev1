@@ -23,7 +23,7 @@ input[type='email']:focus,
     box-shadow: none;
     border-bottom: 1px solid rgba(151, 228, 36, 0.7);
 }
-#btn, #submit {
+#btn1, #btn2, #btn3, #submit {
     border: 1px solid #97e424b3;
     color: rgba(150, 150, 150, 1);
     border-radius: 5px;
@@ -63,4 +63,8 @@ a{
 
 a:hover {
     color: rgba(151, 228, 36, 0.7);
+}
+
+#divSect1, #divSect2{
+    display:none;
 }

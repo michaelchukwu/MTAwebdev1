@@ -57,8 +57,8 @@
                 </section>
                 </div>
 
-                <div id="divSect1" hidden>
-                <section id="pg1" class="sec">
+                <!-- <div id="divSect1" hidden> -->
+                <section id="pg1" class="sec" hidden>
                     <div class="mx-auto" style="width:600px">
                         <div id="q1" class="form-group">
                             
@@ -190,8 +190,8 @@
                 </section>
                 </div>
                 
-                <div id="divSect2" hidden>
-                <section id="pg2"  class="sec">
+                <!-- <div id="divSect2" hidden> -->
+                <section id="pg2"  class="sec" hidden>
                         <div class="mx-auto" style="width:600px">
                     
                         <div id="q6" class="form-group">
@@ -264,7 +264,7 @@
                         </div>
 
                 </section>
-                </div>
+                <!-- </div> -->
            
        </form>
 
@@ -288,14 +288,14 @@
 
             // Transitions between Personal ID section and the first section of questions
             document.getElementById("btn2").addEventListener("click", function(){
-                document.getElementById("divSect1").removeAttribute("hidden");
-                document.getElementById("divInfo").style.display = "none";
+                document.getElementById("pg1").removeAttribute("hidden");
+                document.getElementById("namesect").style.display = "none";
             });
 
             // Transitions between the first section of questions and the second, not working though
             document.getElementById("btn3").addEventListener("click", function(){
-                document.getElementById("divSect1").style.display = "none";
-                document.getElementbyid("divSect2").removeAttribute("hidden");
+                document.getElementById("pg1").style.display = "none";
+                document.getElementById("pg2").removeAttribute("hidden");
             });
 
             //Supposed to extract the value from a radio input, not working though    

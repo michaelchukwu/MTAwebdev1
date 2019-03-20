@@ -64,7 +64,3 @@ a{
 a:hover {
     color: rgba(151, 228, 36, 0.7);
 }
-
-#divSect1, #divSect2{
-    display:none;
-}

@@ -8,6 +8,24 @@ header p {
     font-size: 11px;
 }
 
+.error {
+    display: none;
+}
+
+.error_show {
+    color: red;
+    font-style: italic;
+
+}
+
+input.invalid, textarea.invalid {
+    border-bottom: 1px solid red;
+}
+
+input.valid, textarea.valid {
+    border-bottom: 1px solid rgba(151, 228, 36, 0.7);
+}
+
 input[type='text'],
 input[type='email'],
 #comments {
@@ -29,7 +47,7 @@ input[type='email']:focus,
     border-radius: 5px;
 }
 
-#btn:hover {
+#btn1, #btn2, #btn3,:hover {
     color: rgba(151, 228, 36, 0.7);
 }
 #submit{

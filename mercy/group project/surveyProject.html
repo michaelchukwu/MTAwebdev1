@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -17,74 +17,78 @@
            <p id="description">HOW DID WE DO? TAKE A MOMENT AND FILL THIS SURVEY.</p>
    </header>
    <div class="outer container">
-       <form id="survey-form" role="form">
+       <form id="survey-form" role="form" onSubmit="writeToFile(this)" >
             <section id="namesec">
 
                 <div class="form-row form-group">
                     <div class="col">
                        <!-- <label for="name" class="label">NAME</label> -->
-                        <input type="text" class="form-control" placeholder="ENTER YOUR NAME" required>  
+                        <input type="text" class="form-control" placeholder="ENTER YOUR NAME" id="username" required>
+                        <span class="error">*This field is required</span>  
                     </div>
                     <div class="col">
                         <!--<label for="email" class="label">EMAIL</label> -->
-                        <input type="email" class="form-control" placeholder="EMAIL ADDRESS" required>
+                        <input type="email" class="form-control" placeholder="EMAIL ADDRESS" id="emailAdd" required>
+                        <span class="error">*This field is required</span>
                     </div>
                 </div>
 
                     <div class="form-group text-right" >
-                        <button id="btn" type="button" class="btn btn-outline btn-lg ">Next</button>
+                        <button id="btn1" type="button" class="btn btn-outline btn-lg ">Next</button>
                     </div>
 
                 
 
             </section>
 
-                <section id="info">
+                <section id="info" style="display:none;">
                     <div class="form-row form-group">
                         <div class="col">
                            <!-- <label for="course" class="label">COURSE TAKEN</label> -->
-                            <input type ="text" class="form-control" placeholder="ENTER THE COURSE YOU TOOK">
+                            <input type ="text" class="form-control" placeholder="ENTER THE COURSE YOU TOOK" id="course" required>
+                            <span class="error">*This field is required</span>
                         </div>
 
                         <div class="col">
                      <!--<label for="info" class="label">TUTOR'S NAME</label> -->
-                    <input type="text" class="form-control" placeholder="ENTER TUTOR'S NAME">
+                    <input type="text" class="form-control" placeholder="ENTER TUTOR'S NAME" id="tutor" required>
+                    <span class="error">*This field is required</span>
                     </div>
 
                     </div>
                     <div class="form-group text-right">
-                    <button id="btn" type="button" class="btn btn-outline btn-lg">Next</button>
+                    <button id="btn2" type="button" class="btn btn-outline btn-lg">Next</button>
                 </div>
                 </section>
 
-                <section id="pg1" class="sec" >
+                <section id="pg1" class="sec" style="display:none;">
                     <div class="mx-auto" style="width:600px">
                         <div id="q1" class="form-group">
                             
                                 <p>How would you rate the delivery of the lessons?</p>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" value="vgood" name="q1">
+                                    <input class="form-check-input q1A" type="radio" value="vgood" name="q1">
                                     <label class="form-check-label" for="vgood">Very Good</label>
                                 </div>
                                 
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" value="good" name="q1">
+                                    <input class="form-check-input q1A" type="radio" value="good" name="q1">
                                     <lable class="form-check-label" for="good">Good</lable>
                                 </div>  
                             
                             <div class="form-btn form-check-inline">
-                                <input class="form-check-input" type="radio" value="fair" name="q1">
+                                <input class="form-check-input q1A" type="radio" value="fair" name="q1">
                                 <label class="form-check-label" for="fair">Fair</label>
                             </div>
                             
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" value="poor" name="q1">
+                                <input class="form-check-input q1A" type="radio" value="poor" name="q1">
                                 <label class="form-check-label" for="poor">Poor</label>
 
                             </div>
                             
                             <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" value="vpoor" name="q1">
+                                    <input class="form-check-input q1A" type="radio" value="vpoor" name="q1">
                                     <label class="form-check-label" for="vpoor">Very Poor</label>
             
                                         </div>
@@ -185,14 +189,14 @@
                                                     </div>
                                             </div>
                                             <div class="form-group text-right">
-                                                    <button id="btn" type="button" class="btn btn-outline btn-lg">Next</button>
+                                                    <button id="btn3" type="button" class="btn btn-outline btn-lg">Next</button>
                                                 </div>
                             </div>
                     
 
                 </section>
 
-                <section id="pg2"  class="sec">
+                <section id="pg2"  class="sec" style="display:none;">
                         <div class="mx-auto" style="width:600px">
                     
                     <div id="q6" class="form-group">
@@ -220,7 +224,7 @@
                                     </div>
                         </div>
                         
-                        <div id="q8" class="form-group">
+                        <div id="q8" class="form-group" required>
                                 <p>Has the class so far met your general expectations?</p>
                                 <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" value="yes" name="q8">
@@ -265,7 +269,7 @@
                     </div>
 
                 </section>
-           
+        <div id="success" style="display:none;" class="text-center">Thank you for participating in our survey!</div>
             </div>
        </form>
 
@@ -273,8 +277,8 @@
     
 
 
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="jquery-3.3.1.min.js" ></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="main.js"></script>

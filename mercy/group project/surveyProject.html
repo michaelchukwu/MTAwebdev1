@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="main.js"></script>
     
     
 </head>
@@ -61,7 +62,11 @@
                 </div>
                 </section>
 
+<<<<<<< HEAD
+                <section id="pg1" class="sec">
+=======
                 <section id="pg1" class="sec" style="display:none;">
+>>>>>>> 5f74d80b21564050f3eb7b59fd28a0995acbfaf0
                     <div class="mx-auto" style="width:600px">
                         <div id="q1" class="form-group">
                             
@@ -96,13 +101,13 @@
                         <div id="q2" class="form-group">
                                 <p>Would you say that you have been provided with enough relevant materials?</p>
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="yes" name="q2">
+                                        <input class="form-check-input" type="radio" value="vgood" name="q2">
                                         <label class="form-check-label" for="yes">yes</label>
         
                                     </div>
 
                                     <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" value="no" name="q2">
+                                            <input class="form-check-input" type="radio" value="vpoor" name="q2">
                                             <label class="form-check-label" for="poor">No</label>
             
                                         </div>
@@ -196,17 +201,21 @@
 
                 </section>
 
+<<<<<<< HEAD
+                <section id="pg2"  class="sec">
+=======
                 <section id="pg2"  class="sec" style="display:none;">
+>>>>>>> 5f74d80b21564050f3eb7b59fd28a0995acbfaf0
                         <div class="mx-auto" style="width:600px">
                     
                     <div id="q6" class="form-group">
                             <p>Would you say the learning aids have been adequate?</p>
                             <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" value="yes" name="q6">
+                                    <input class="form-check-input" type="radio" value="vgood" name="q6">
                                     <label class="form-check-label" for="yes">yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="no" name="q6">
+                                        <input class="form-check-input" type="radio" value="vpoor" name="q6">
                                         <label class="form-check-label" for="no">No</label>
                                     </div>
                      </div>
@@ -214,12 +223,12 @@
                      <div id="q7" class="form-group">
                             <p>Have you found the take home exercises useful to your learning?</p>
                             <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" value="yes" name="q7">
+                                    <input class="form-check-input" type="radio" value="vgood" name="q7">
                                     <label class="form-check-label" for="yes">Yes</label>
                                 </div>
 
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="no" name="q7">
+                                        <input class="form-check-input" type="radio" value="vpoor" name="q7">
                                         <label class="form-check-label" for="no">No</label>
                                     </div>
                         </div>
@@ -227,17 +236,17 @@
                         <div id="q8" class="form-group" required>
                                 <p>Has the class so far met your general expectations?</p>
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="yes" name="q8">
+                                        <input class="form-check-input" type="radio" value="vgood" name="q8">
                                         <label class="form-check-label" for="yes">Yes</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" value="no" name="q8">
+                                            <input class="form-check-input" type="radio" value="vpoor" name="q8">
                                             <label class="form-check-label" for="no">No</label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" value="indifferent" name="q8">
+                                                <input class="form-check-input" type="radio" value="fair" name="q8">
                                                 <label class="form-check-label" for="Indifferent">Indifferent</label>
                                             </div>
                         </div>
@@ -264,7 +273,7 @@
                             <textarea name="comments" placeholder="Any comments" class="form-control" id="comments" row="4"></textarea>                           
                         </div>
                         <div class="main-btn text-right">
-                            <input type="submit" value="submit" id="submit" class="btn btn-outline btn-lg">
+                            <input type="submit" value="submit" id="submit" onclick="tabulateAnswers()" class="btn btn-outline btn-lg">
                         </div>
                     </div>
 

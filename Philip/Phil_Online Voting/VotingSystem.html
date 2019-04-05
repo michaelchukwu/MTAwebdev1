@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ONLINE VOTERS PORTAL</title>
+    
+    <style>
+        #table, td{border: 1px solid black; padding:15px; border-radius:5px; background-color: rgb(242, 255, 254);}
+        #cover1{border: 5px solid black; background-color: rgb(187, 216, 216); height:100%;}
+        #presBox{border: 5px solid black;}
+        #submit{color:black; background-color: rgb(43, 138, 43); padding:10px; width:25%;}
+        #headCover{padding-top:5px; border-bottom: solid black; background-image: linear-gradient(to right, rgb(1, 43, 29) ,gainsboro);}
+        #pvc{width:30%;}
+        #finger{width:30%;}
+        #puCode{width:30%};
+        
+        #head1{text-align: right; color:solid black; word-spacing: 50px;}
+        #presText, #gubText, #senText{text-align: center; background-color: lightgreen; font-size:18px;}
+        #candText{font-size: 25px; color:solid; text-align: center;}                              
+    </style>
+</head>
+
+<body>
+    <div style="display:none">
+       <!-- <The webpage is contained within this div--  -->
+        <div id="cover1" class="container">
+            <div id="headCover">
+                <p1 id="head1"><h1>ONLINE VOTING PORTAL</h1></p1>
+            </div>
+            <table style="width:100%" id="tab1">
+                <tr>
+                    <th id="candText" colspan="6">CANDIDATE SELECTION</th>
+                </tr>                        
+                <tr>
+                    <td colspan="6" id="presText">PRESIDENTIAL</td>
+                </tr>
+                <tr>
+                <div id="pres">
+                    <td align="center"><input type="radio" value="APC" name="pres"></br><img id="logo-APC" src = "Logos/APC-S.png"></td>
+                    <td align="center"><input type="radio" value="PDP" name="pres"></br><img id="logo-PDP" src = "Logos/PDP-S.jpg"></td>
+                    <td align="center"><input type="radio" value="SDP" name="pres"></br><img id="logo-SDP" src = "Logos/SDP-S.png"></td>
+                    <td align="center"><input type="radio" value="YPP" name="pres"></br><img id="logo-YPP" src = "Logos/YPP-S.png"></td>
+                    <td align="center"><input type="radio" value="FRESH" name="pres"></br><img id="logo-FRESH" src = "Logos/Fresh-S.jpg"></td>
+                    <td align="center"><input type="radio" value="ANN" name="pres"></br><img id="logo-ANN" src = "Logos/ANN-S.jpg"></td>
+                </div>
+                </tr>
+                <tr>
+                    <td colspan="6" id="senText">SENATORIAL</td>
+                </tr>
+                <tr>
+                <div id="sen">
+                    <td align="center"><input type="radio" value="APC" name="sen"></br><img id="logo-APC" src = "Logos/APC-S.png"></td>
+                    <td align="center"><input type="radio" value="PDP" name="sen"></br><img id="logo-PDP" src = "Logos/PDP-S.jpg"></td>
+                    <td align="center"><input type="radio" value="SDP" name="sen"></br><img id="logo-SDP" src = "Logos/SDP-S.png"></td>
+                    <td align="center"><input type="radio" value="YPP" name="sen"></br><img id="logo-YPP" src = "Logos/YPP-S.png"></td>
+                    <td align="center"><input type="radio" value="FRESH" name="sen"></br><img id="logo-FRESH" src = "Logos/Fresh-S.jpg"></td>
+                    <td align="center"><input type="radio" value="ANN" name="sen"></br><img id="logo-ANN" src = "Logos/ANN-S.jpg"></td>
+                </div>
+                </tr>
+                <tr>
+                    <td colspan="6" id="gubText">GUBERNATORIAL</td>
+                </tr>
+                <tr>
+                <div id="gub">
+                    <td align="center"><input type="radio" value="APC" name="gub"></br><img id="logo-APC" src = "Logos/APC-S.png"></td>
+                    <td align="center"><input type="radio" value="PDP" name="gub"></br><img id="logo-PDP" src = "Logos/PDP-S.jpg"></td>
+                    <td align="center"><input type="radio" value="SDP" name="gub"></br><img id="logo-SDP" src = "Logos/SDP-S.png"></td>
+                    <td align="center"><input type="radio" value="YPP" name="gub"></br><img id="logo-YPP" src = "Logos/YPP-S.png"></td>
+                    <td align="center"><input type="radio" value="FRESH" name="gub"></br><img id="logo-FRESH" src = "Logos/Fresh-S.jpg"></td>
+                    <td align="center"><input type="radio" value="ANN" name="gub"></br><img id="logo-ANN" src = "Logos/ANN-S.jpg"></td>
+                </div>
+                </tr>            
+                <tr>
+                    <th  colspan="6">
+                        <button id="submit"><strong>COMPLETE VOTING</strong></button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+        <div id="loginplace" container>
+        <input type="text" id="pvc" placeholder="ENTER PVC HINT:1"></br>
+        <input type="text" id="finger" placeholder="PLACE FINGER ON SCANNER HINT:2"></br>
+        <input type="text" id="puCode" placeholder="ENTER YOUR POLLING UNIT CODE HERE HINT:3"></br>
+        <button id="login">LOG IN</button>
+    </div>
+    <div id="notice"></div>
+
+    
+    <script>
+        document.getElementById('login').addEventListener('click', function(){
+            var pvc = document.getElementById('pvc').value;
+            var finger = document.getElementById('finger').value;
+            var pu = document.getElementById('puCode').value;
+            if(pvc == '1'){
+                if(finger == '2'){
+                    if(pu == '3'){
+                        document.querySelector('div').style.display = '';
+                        document.querySelector('#loginplace').style.display = 'none';
+                    // document.getElementById('vote').removeAttribute('disabled');
+                    }else{
+                        document.getElementById('notice').innerText = 'PLEASE ENTER A VALID POLLING UNIT CODE';
+                    }
+                    
+                }else{
+                    document.getElementById('notice').innerText = 'USER FINGERPRINT NOT RECOGNISED';
+                }
+            }else{
+                document.getElementById('notice').innerText = 'PVC NUMBER ENTERED NOT FOUND';
+            }
+        });
+
+        var president;
+        var senator;
+        var governor;
+        var pcAPC; var pcPDP; var pcSDP; var pcYPP; var pcFRESH; var pcANN;
+        var scAPC; var scPDP; var scSDP; var scYPP; var scFRESH; var scANN;
+        var gcAPC; var gcPDP; var gcSDP; var gcYPP; var gcFRESH; var gcANN;
+        
+        var presCount = [pcAPC, pcPDP, pcSDP, pcYPP, pcFRESH, pcANN];
+        var senCount = [scAPC, scPDP, scSDP, scYPP, scFRESH, scANN];
+        var gubCount = [gcAPC, gcPDP, gcSDP, gcYPP, gcFRESH, gcANN];
+
+        document.getElementById("submit").addEventListener("click", function (event){
+            event.preventDefault();
+                president = document.querySelector("input[name=pres]:checked").value;
+                senator = document.querySelector("input[name=sen]:checked").value;
+                governor = document.querySelector("input[name=gub]:checked").value;
+            
+            console.log("User has selected" +" " +president +" " +"for President");
+            console.log("User has selected" +" " +senator +" " +"for the Senate");
+            console.log("User has selected" +" " +governor +" " +"for Governor");
+
+            pcAPC=0; pcPDP=0; pcSDP=0; pcYPP=0; pcFRESH=0; pcANN=0;
+            scAPC=0; scPDP=0; scSDP=0; scYPP=0; pscRESH=0; scANN=0;
+            gcAPC=0; gcPDP=0; gcSDP=0; gcYPP=0; gcFRESH=0; gcANN=0;
+            
+            function collate(){
+                if (president == "APC"){pcAPC ++}
+                else if(president == "PDP"){pcPDP ++}
+                else if(president == "SDP"){pcSDP ++}
+                else if(president == "YPP"){pcYPP ++}
+                else if(president == "FRESH"){pcFRESH ++}
+                else {pcANN ++}
+                
+                if (senator == "APC"){scAPC ++}
+                else if(senator == "PDP"){scPDP ++}
+                else if(senator == "SDP"){scSDP ++}
+                else if(senator == "YPP"){scYPP ++}
+                else if(senator == "FRESH"){scFRESH ++}
+                else {scANN ++}
+
+                if (governor == "APC"){gcAPC ++}
+                else if(governor == "PDP"){gcPDP ++}
+                else if(governor == "SDP"){gcSDP ++}
+                else if(governor == "YPP"){gcYPP ++}
+                else if(governor == "FRESH"){gcFRESH ++}
+                else {scANN ++}
+
+                console.log(presCount);
+                console.log(senCount);
+                console.log(gubCount);
+
+               
+            };
+            // collate(); 
+            alert("Confirm that you have selected" +" " +president +" " +"for Presidential"  +"," +" " +senator +" " +"for Senatorial and" +" " +governor +" " +"for Gubernatorial");
+        });
+            
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

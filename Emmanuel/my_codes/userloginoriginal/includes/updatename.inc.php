@@ -5,7 +5,7 @@
       $curUser = mysqli_real_escape_string($conn, $_POST['currentusername']);//initializing and sanitizing variables
       $newUser = mysqli_real_escape_string($conn, $_POST['newusername']);
       $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
-      //$id =  $_POST['id'];
+      $id =  $_POST['id'];
 
 
       if (empty($curUser) || empty($pwd) || empty($newUser))  {
@@ -13,7 +13,7 @@
          exit();
       }
       else{
-         $sql = "SELECT * FROM users WHERE uidUsers= '$curUser'";
+         $sql = "SELECT * FROM users WHERE uidUsers= '$curUser' AND idUsers='$id'";
          $result = mysqli_query($conn, $sql);
          $resultCheck = mysqli_num_rows($result);
          if($resultCheck < 1) {
@@ -29,7 +29,7 @@
                exit();  
               }
               else if ($hashedPwdCheck == true) {
-               $sql = "UPDATE users set uidUsers = '$newUser' WHERE uidUsers='$curUser'"; 
+               $sql = "UPDATE users set uidUsers = '$newUser' WHERE uidUsers= '$curUser'AND idUsers='$id'"; 
                $result = mysqli_query($conn, $sql);
                if ($result) {
                   echo 'updated!!!';

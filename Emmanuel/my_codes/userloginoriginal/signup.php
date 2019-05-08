@@ -3,7 +3,7 @@
 ?>
   <main>
 
-      <div class="container">
+      <div class="container" style = "margin-top:13rem;">
          <section class="section-default">
              <?php
                 if (isset($_GET['error'])) {

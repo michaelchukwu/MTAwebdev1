@@ -6,11 +6,12 @@
     <title>Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="calculator.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="calculator.js"></script>
 </head>
 <body>
-    <div class="bg"></div>
-    <div class="main">
+        <div class="col-lg-4"></div>       
+        <div class="container" style="margin: 15rem 0 auto 45rem; width: 40%">
         <form name="form">
             <input class="textview" name="textview" placeholder="0">
         </form>
@@ -55,7 +56,6 @@
                 <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
                 <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
                 <td><input class="button" type="button" value="√" onclick="ruth()"></td>
-
             </tr>
             
 
@@ -67,6 +67,10 @@
                 <td><input class="button" type="button" value="=" onclick="equal()"></td>
             </tr>
         </table>
-    </div>
+        <div style="margin-top:5px; border-radius:10px;">
+            <a href="../weightconverter/weightconverter.html" target="_blank"><button>WEIGHT CONVERTER</button></a>
+        </div>
+</div>
+<div class="col-lg-4"></div>
 </body>
 </html>

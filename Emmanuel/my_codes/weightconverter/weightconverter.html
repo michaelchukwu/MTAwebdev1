@@ -10,8 +10,21 @@
     <style>
         body{
             margin: 70px;
-            background: linear-gradient(to right, #e91e63, #3f51b5);
+            background:rgb(243, 240, 240);        
             color:rgb(0, 0, 0);
+            }
+        h4{
+            text-indent: 5px;
+        }
+        button{
+            width:100px;
+            border-color: inherit;
+        }
+        button:hover{
+            border-color: red;
+            color: white;
+            transition: 0.9s ease; 
+
         }
     </style>
 </head>
@@ -19,7 +32,7 @@
      <div class="container">
          <div class="row">
              <div class="col-md-6 offset-md-3">
-                 <h1 class="display-4 text-center mb-3" style="color:white;">Weight
+                 <h1 class="display-4 text-center mb-3" style="color:black">Weight
                      Converter</h1>
                      <form name="form">
                         <div class="form-group">
@@ -29,7 +42,7 @@
                             name="textview"
                             class="form-control form-control-lg"
                             placeholder="Enter digit and hit the unit to be converted">
-                           <div id="scndoutput" style="background:white;"></div>
+                           <div id="scndoutput" style="background:white; text-indent: 5px;"></div>
                         </div> 
                      </form>
                      <div id="gramouput">
@@ -71,11 +84,11 @@
     
 
                             <div class="mt-4">
-                                <button onclick="pounds()" style="border-radius:4px;" class="btn-danger btn-round">Pounds</button>
-                                <button onclick="kgm()" style="border-radius:4px;" class="btn-primary btn-round">Kilograms</button>
-                                <button onclick="oz()" style="border-radius:4px;" class="btn-success" style="border-radius:4px;">Ounces</button>
-                                <button style="background:purple; border-radius:4px;" onclick="gram()" class="btn-primary btn-rounded">Grams</button>
-                                <button onclick="clean()" style="background:black; color:white; border-radius: 4px;">CLEAR</button>
+                                <button onclick="pounds()" style="height:40px; background:red;">POUNDS</button>
+                                <button onclick="kgm()" style="height:40px; background:blue;">KILOGRAMS</button>
+                                <button onclick="oz()" style="height:40px; background:yellow;">OUNCES</button>
+                                <button style="height:40px;" onclick="gram()">GRAMS</button>
+                                <button onclick="clean()" style="height:40px; background:black; color:white;">CLEAR</button>
                             </div>
                 </div>
              </div>

@@ -20,12 +20,12 @@ function back() {
 }
 
 function ruth() {
-    var exp = document.form.textview.value
+    var exp = document.form.textview.value;
     document.form.textview.value = eval(Math.sqrt(exp))
 }
 
 function cus() {
-    var exp = document.form.textview.value
+    var exp = document.form.textview.value;
     document.form.textview.value = eval(Math.cos(exp))
 }
 
